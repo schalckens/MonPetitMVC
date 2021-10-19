@@ -1,0 +1,17 @@
+{
+    "name": "vendor/mon-petit-m-v-c",
+    "description": "Description of project MonPetitMVC.",
+    "authors": [
+        {
+            "name": "valentine.schalckens",
+            "email": "your@email.here"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "APP\\": "src",
+            "Tools\\": "includes"
+        }
+    }
+}
