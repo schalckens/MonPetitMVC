@@ -4,14 +4,15 @@
     "authors": [
         {
             "name": "valentine.schalckens",
-            "email": "your@email.here"
+            "email": "v.schalckens@gmail.com"
         }
     ],
     "require": {},
     "autoload": {
         "psr-4": {
             "APP\\": "src",
-            "Tools\\": "includes"
+            "Tools\\": "includes",
+            "Entity\\": "src/Entity"
         }
     }
 }
