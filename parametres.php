@@ -7,3 +7,7 @@
  */
 
 define('DATABASE_URL', "localhost");
+define('DATABASE_USER',"valentine");
+define('DATABASE_PWD', "admin");
+define('DATABASE_NAME',"clicommvc");
+define('CNSTRING',"mysql:host=".DATABASE_URL.";dbname=".DATABASE_NAME.";charset=UTF8");
