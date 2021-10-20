@@ -5,10 +5,14 @@
         <group>
             <file>file:/C:/Users/valentine.schalckens/Documents/NetBeansProjects/MonPetitMVC/config/conf.php</file>
             <file>file:/C:/Users/valentine.schalckens/Documents/NetBeansProjects/MonPetitMVC/src/Entity/Client.php</file>
+            <file>file:/C:/Users/valentine.schalckens/Documents/NetBeansProjects/MonPetitMVC/src/Controller/IdentificationController.php</file>
+            <file>file:/C:/Users/valentine.schalckens/Documents/NetBeansProjects/MonPetitMVC/templates/GestionClientView/unClient.php</file>
             <file>file:/C:/Users/valentine.schalckens/Documents/NetBeansProjects/MonPetitMVC/includes/Connexion.php</file>
             <file>file:/C:/Users/valentine.schalckens/Documents/NetBeansProjects/MonPetitMVC/public/index.php</file>
             <file>file:/C:/Users/valentine.schalckens/Documents/NetBeansProjects/MonPetitMVC/parametres.php</file>
             <file>file:/C:/Users/valentine.schalckens/Documents/NetBeansProjects/MonPetitMVC/src/Entity/Commande.php</file>
+            <file>file:/C:/Users/valentine.schalckens/Documents/NetBeansProjects/MonPetitMVC/src/Model/GestionClientModel.php</file>
+            <file>file:/C:/Users/valentine.schalckens/Documents/NetBeansProjects/MonPetitMVC/src/Controller/GestionClientController.php</file>
             <file>file:/C:/Users/valentine.schalckens/Documents/NetBeansProjects/MonPetitMVC/config/define.php</file>
             <file>file:/C:/Users/valentine.schalckens/Documents/NetBeansProjects/MonPetitMVC/composer.json</file>
         </group>
