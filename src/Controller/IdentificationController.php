@@ -5,6 +5,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+namespace APP\Controller;
 
-include_once(RACINE."config".DS."define.php");
-include_once(RACINE."parametres.php");
+class IdentificationController {
+    
+}

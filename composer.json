@@ -11,8 +11,7 @@
     "autoload": {
         "psr-4": {
             "APP\\": "src",
-            "Tools\\": "includes",
-            "Entity\\": "src/Entity"
+            "Tools\\": "includes"
         }
     }
 }

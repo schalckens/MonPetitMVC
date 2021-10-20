@@ -6,5 +6,4 @@
  * and open the template in the editor.
  */
 
-include_once(RACINE."config".DS."define.php");
-include_once(RACINE."parametres.php");
+namespace APP\Model;
