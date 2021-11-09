@@ -6,10 +6,21 @@ namespace Composer\Autoload;
 
 class ComposerStaticInitdb007e8d2255c84d9c382b5d6136aa4c
 {
+    public static $files = array (
+        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
         'T' => 
         array (
+            'Twig\\' => 5,
             'Tools\\' => 6,
+        ),
+        'S' => 
+        array (
+            'Symfony\\Polyfill\\Mbstring\\' => 26,
+            'Symfony\\Polyfill\\Ctype\\' => 23,
         ),
         'A' => 
         array (
@@ -18,9 +29,21 @@ class ComposerStaticInitdb007e8d2255c84d9c382b5d6136aa4c
     );
 
     public static $prefixDirsPsr4 = array (
+        'Twig\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/twig/twig/src',
+        ),
         'Tools\\' => 
         array (
             0 => __DIR__ . '/../..' . '/includes',
+        ),
+        'Symfony\\Polyfill\\Mbstring\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
+        ),
+        'Symfony\\Polyfill\\Ctype\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
         ),
         'APP\\' => 
         array (
@@ -29,11 +52,6 @@ class ComposerStaticInitdb007e8d2255c84d9c382b5d6136aa4c
     );
 
     public static $classMap = array (
-        'APP\\Controller\\GestionClientController' => __DIR__ . '/../..' . '/src/Controller/GestionClientController.php',
-        'APP\\Controller\\IdentificationController' => __DIR__ . '/../..' . '/src/Controller/IdentificationController.php',
-        'APP\\Entity\\Client' => __DIR__ . '/../..' . '/src/Entity/Client.php',
-        'APP\\Entity\\Commande' => __DIR__ . '/../..' . '/src/Entity/Commande.php',
-        'APP\\Model\\GestionClientModel' => __DIR__ . '/../..' . '/src/Model/GestionClientModel.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
 
