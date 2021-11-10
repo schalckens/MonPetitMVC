@@ -7,7 +7,9 @@
             "email": "v.schalckens@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "twig/twig": "3.x-dev"
+    },
     "autoload": {
         "psr-4": {
             "APP\\": "src",
