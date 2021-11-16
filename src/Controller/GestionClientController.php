@@ -13,6 +13,8 @@ use APP\Entity\Client;
 use ReflectionClass;
 use \Exception;
 use Tools\MyTwig;
+use Tools\Repository;
+use APP\Repository\ClientRepository;
 
 class GestionClientController {
     
@@ -21,11 +23,14 @@ class GestionClientController {
         $modele = new GestionClientModel();
         //$id = filter_var(intval($params["id"]), FILTER_VALIDATE_INT);#2
         // dans tous les cas on récupère les Ids des clients
-        $ids = $modele->findIds();
+        $ids = $modele->findIds(); #3
+        $repository = Repository::getRepository("APP\Entity\Client");
+        $id = $repository->findIds();
         $params['lesId'] = $ids;
         if (array_key_exists('id', $params)) {
             $id = filter_var(intval($params["id"]), FILTER_VALIDATE_INT);
-            $unClient = $modele->find($id);
+            $unClient = $repository->find($id);
+            //$unClient = $modele->find($id); #3
             // on place le client trouvé dans le tableau de paramètres que l'on va envoyer à la vue
             $params['unClient'] = $unClient;
         }
@@ -48,13 +53,15 @@ class GestionClientController {
     
     public function chercheTous() {
         //  appel de la méthode findAll() de la classe Model adequate
-        $modele = new GestionClientModel();
-        $clients = $modele->findAll();
+        //$modele = new GestionClientModel(); #3
+        //$clients = $modele->findAll(); #3
+        $repository = Repository::getRepository("APP\Entity\Client");
+        $clients = $repository->findAll();
         if($clients) {
             $r = new ReflectionClass($this);
             $vue = str_replace('Controller', 'View', $r->getShortName())."/tousClients.html.twig";
             MyTwig::afficheVue($vue, array('clients' => $clients));
-            //include_once PATH_VIEW . str_replace('Controller', 'View', $r->getShortName()) . "/plusieursClients.php";
+            //include_once PATH_VIEW . str_replace('Controller', 'View', $r->getShortName()) . "/plusieursClients.php"; #1
         } else {
             throw new Exception("Aucun Client à afficher");
         }
@@ -65,12 +72,20 @@ class GestionClientController {
             $vue = "GestionClientView\\creerClient.html.twig";
             MyTwig::afficheVue($vue, array());
         } else {
-            $params = filter_var_array($params);
-            $this->enregistreClient($params);
+            //création de l'objet client
+            $client = new Client($params);
+            $repository = Repository::getRepository("APP\Entity\Client");
+            $repository->insert($client);
             $this->chercheTous();
             
+            /*
+            $params = filter_var_array($params);
+            $this->enregistreClient($params);
+            $this->chercheTous(); 
+             * #3
+             */
+            
         }
-        
     }
     
     public function enregistreClient($params) {
@@ -78,5 +93,11 @@ class GestionClientController {
         $client = new Client($params);
         $modele = new GestionClientModel();
         $modele->enregistreClient($client);
+    }
+    
+    public function nbClients($params) {
+        $repository = Repository::getRepository("APP\Entity\Client");
+        $nbClients = $repository->countRows();
+        echo "Nombre de clients : " . $nbClients;
     }
 }
