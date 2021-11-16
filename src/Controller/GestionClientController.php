@@ -9,6 +9,7 @@
 namespace APP\Controller;
 
 use APP\Model\GestionClientModel;
+use APP\Entity\Client;
 use ReflectionClass;
 use \Exception;
 use Tools\MyTwig;
@@ -60,8 +61,16 @@ class GestionClientController {
     }
     
     public function creerClient($params) {
-        $vue = "GestionClientView\\creerClient.html.twig";
-        MyTwig::afficheVue($vue, array());
+        if(empty($params)){
+            $vue = "GestionClientView\\creerClient.html.twig";
+            MyTwig::afficheVue($vue, array());
+        } else {
+            $params = filter_var_array($params);
+            $this->enregistreClient($params);
+            $this->chercheTous();
+            
+        }
+        
     }
     
     public function enregistreClient($params) {
