@@ -100,4 +100,26 @@ class GestionClientController {
         $nbClients = $repository->countRows();
         echo "Nombre de clients : " . $nbClients;
     }
+    
+    public function testFindBy($params) {
+        $repository = Repository::getRepository("APP\Entity\Client");
+        //$params = array("titreCli" => "Monsieur", "villeCli" => "Toulon");
+        //$clients = $repository->findBytitreCli_and_villeCli($params);
+        $params = array("cpli" => "14000", "titreCli" => "Madame");
+        $clients = $repository->findBycpCli_and_titreCLi($params);
+        $r = new ReflectionClass($this);
+        $vue = str_replace('Controller', 'View', $r->getShortName()) . "/tousClients.html.twig";
+        MyTwig::afficheVue($vue, array('clients' => $clients));
+    }
+    
+    public function rechercheClients($params) {
+        $repository = Repository::getRepository("APP\Entity\Client");
+        $titres = $repository->findColumnDistinctValues('titreCli');
+        $cps = $repository->findColumnDistinctValues('cpCli');
+        $villes = $repository->findColumnDistinctValues('villeCli');
+        $params['titres'] = $titres;
+        $params['cps'] = $cps;
+        $params['villes'] = $villes;
+        $vue = "GestionClientVIew";
+    }
 }
