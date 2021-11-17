@@ -30,7 +30,7 @@ and open the template in the editor.
                 echo $ex->getMessage();
                 //$vue = 
                 //$params = array()
-                //include PATH_VIEW.'$BaseController'errors/.'VIew'.DS.'unCLient.php';
+                //include PATH_VIEW.'$BaseController'errors/.'VIew'.DS.'unClient.php';
             }
         ?>
     </body>

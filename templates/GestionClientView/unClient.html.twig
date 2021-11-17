@@ -28,7 +28,7 @@
     {% endblock %}
     {% if unClient %} 
         {% block affiche %}
-            <p><h2> Informations du client numéro !!! {{ unClient.getId() }} </h2></p>
+            <p><h2> Informations du client numéro {{ unClient.getId() }} </h2></p>
         <p> {{ unClient.getPrenomCli() }} {{ unClient.getNomCli() }} </p>
         <p> {{ unClient.getAdresseRue1Cli() }} </p>
         {% if unClient.getAdresseRue2Cli() %}
