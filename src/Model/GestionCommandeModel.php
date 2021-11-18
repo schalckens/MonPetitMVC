@@ -29,4 +29,13 @@ class GestionCommandeModel {
         $lignes = $unObjetPdo->query($sql);
         return $lignes->fetchAll(PDO::FETCH_CLASS, Commande::class);
     }
+    
+    public function findAllByIdClient($idClient){
+        $unObjetPdo = Connexion::getConnexion();
+        $sql = "select * from COMMANDE where idClient = :idClient";
+        $lignes = $unObjetPdo->prepare($sql);
+        $lignes->bindValue(':idClient',$idClient, PDO::PARAM_INT);
+        $lignes->execute();
+        return $lignes->fetchAll(PDO::FETCH_CLASS, Commande::class);
+    }
 }
