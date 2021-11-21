@@ -2,6 +2,9 @@
 {% extends "layout.html.twig" %}
 {% block contenu %}
     <p><h2> Client : </h2></p>
+{% if client == null %}
+<p> Ce client n'existe pas.</p>
+{% else %}
 <table class='table'> 
     <thead>
         <tr>
@@ -30,6 +33,9 @@
     <td>{{ client.getTelCli() }} </td>
 </tbody>
 </table>
+{% endif %}
+
+
 <p><h2> Liste de des commande : </h2></p>
 {% if commandes == null %}
 <p> Il n'existe pas de commande pour ce client. </p>
