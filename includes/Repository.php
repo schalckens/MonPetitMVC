@@ -110,9 +110,25 @@ class Repository {
     }
     
     public function findColumnDistinctValues($colonne) {
-        $sql = "select distinct " . $colonne . " libelle from " . $this->table . "order by 1";
+        $sql = "select distinct " . $colonne . " libelle from " . $this->table . " order by 1 ";
         //return $this->conexion->query($sql)->fetchAll(PDO::FETCH_ASSOC);
         $tab = $this->connexion->query($sql)->fetchAll(PDO::FETCH_COLUMN);
         return $tab; 
+    }
+    
+    public function findBy($params) {
+        $element = "Choisir ...";
+        while(in_array($element,$params)){
+            unset($params[array_search($element, $params)]);
+        }
+        $cles = array_keys($params);
+        $methode ="findBy";
+        for ($i = 0; $i < count($cles); $i++) {
+            if ($i>0) {
+                $methode .= "_and_";
+            }
+            $methode .= $cles[$i];
+        }
+        return $this->traiteFindBy($methode, array_values($params));
     }
 }

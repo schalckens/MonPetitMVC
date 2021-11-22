@@ -120,6 +120,15 @@ class GestionClientController {
         $params['titres'] = $titres;
         $params['cps'] = $cps;
         $params['villes'] = $villes;
-        $vue = "GestionClientVIew";
+        $vue = "GestionClientVIew\\filtreClients.html.twig";
+        MyTwig::afficheVue($vue,$params);
+    }
+    
+    public function recupereDesClients($params) {
+        $repository = Repository::getRepository("APP\Entity\Client");
+        $clients = $repository->findBy($params);
+        $r = new ReflectionClass($this);
+        $vue = str_replace('Controller', 'View', $r->getShortName())."/tousClients.html.twig";
+        MyTwig::afficheVue($vue, array('clients' => $clients));
     }
 }
