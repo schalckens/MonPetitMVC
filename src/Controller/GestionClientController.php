@@ -20,12 +20,12 @@ class GestionClientController {
     
     public function chercheUn($params) {
         //appel de la méthode find($id) de la classe Model adequate
-        $modele = new GestionClientModel();
+        //$modele = new GestionClientModel();
         //$id = filter_var(intval($params["id"]), FILTER_VALIDATE_INT);#2
         // dans tous les cas on récupère les Ids des clients
-        $ids = $modele->findIds(); #3
+        //$ids = $modele->findIds(); #3
         $repository = Repository::getRepository("APP\Entity\Client");
-        $id = $repository->findIds();
+        $ids = $repository->findIds();
         $params['lesId'] = $ids;
         if (array_key_exists('id', $params)) {
             $id = filter_var(intval($params["id"]), FILTER_VALIDATE_INT);

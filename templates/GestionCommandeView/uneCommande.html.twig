@@ -1,0 +1,35 @@
+{% extends "layout.html.twig" %}
+{% block contenu %}
+    {% block recherche %}
+        <h3>recherche</h3>
+        <div class="container">
+            <form action="?c=GestionCommande&a=chercheUne" method="post">
+                <div class="form-group">
+                    <label for="Numéro de Commande"> Id Commande</label>
+                    <select class="form-control" id="titre" name="id">
+                        {% for id in lesId %}
+                            <option> {{ id['id'] }} </option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <input type="submit" value="Voir" class="btn btn-default"/>
+            </form>
+        </div>
+    {% endblock %}
+    {% if uneCommande %} 
+        {% block affiche %}
+            <p><h2> Informations de la commande numéro {{ uneCommande.getId() }} </h2></p>
+        <p> N°Client : {{ uneCommande.getIdClient() }} </p>
+        <p> Date : {{ uneCommande.getDateCde() }} </p>
+        {% if uneCommande.getNoFacture() %}
+            <p> N° Facture : {{ uneCommande.getNoFacture() }} </p>
+        {% else %}
+            <p> Non Facturée </p>
+        {% endif %}
+    {% endblock %}
+{% endif %}
+{% endblock %}
+{% block footer %}
+    {{ parent() }}
+    Fin de l'affichage
+{% endblock %}

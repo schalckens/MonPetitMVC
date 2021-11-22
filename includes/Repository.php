@@ -43,8 +43,8 @@ class Repository {
         return self::pdo_debugStrParams($ligne);
     }
     public function findIds() {
-        $sql = "select id from ".$this->table;
-        $lignes = $this->connexion->prepare($sql);
+        $sql = "select id from ". $this->table;
+        $lignes = $this->connexion->query($sql);
         $ids = $lignes->fetchAll(PDO::FETCH_ASSOC);
         return $ids;
     }
