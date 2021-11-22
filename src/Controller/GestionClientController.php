@@ -117,11 +117,27 @@ class GestionClientController {
         $titres = $repository->findColumnDistinctValues('titreCli');
         $cps = $repository->findColumnDistinctValues('cpCli');
         $villes = $repository->findColumnDistinctValues('villeCli');
-        $params['titres'] = $titres;
-        $params['cps'] = $cps;
-        $params['villes'] = $villes;
-        $vue = "GestionClientVIew\\filtreClients.html.twig";
-        MyTwig::afficheVue($vue,$params);
+        $paramsVue['titres'] = $titres;
+        $paramsVue['cps'] = $cps;
+        $paramsVue['villes'] = $villes;
+        if (isset($params['titreCli']) || isset($params['cpCli']) || isset($params['villeCli'])) {
+            // c'est le retour du formulaire de choix de filtre
+            $element = "Choisir...";
+            while (in_array($element, $params)) {
+                unset($params[array_search($element, $params)]);
+            }
+            if (count($params) > 0) {
+                $clients = $repository->findBy($params);
+                $paramsVue['clients'] = $clients;
+                foreach ($_POST as $valeur)
+                {
+                    ($valeur != "Choisir...") ? ($criteres[] = $valeur) : (null);
+                }
+                $paramsVue['criteres'] = $criteres;
+            }
+        }
+        $vue = "GestionClientView\\filtreClients.html.twig";
+        MyTwig::afficheVue($vue,$paramsVue);
     }
     
     public function recupereDesClients($params) {
