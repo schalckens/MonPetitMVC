@@ -76,11 +76,13 @@ class Repository {
     
     public function countRows() {
         $sql = "select count(*) AS total from ".$this->table;
+        /*
         $res = $this->connexion->query($sql);
         $data = $res->fetch(PDO::FETCH_ASSOC);
         $nb = $data['total'];
-
-        return $nb;
+        return $nb; 
+         */
+        return $this->connexion->query($sql)->fetchColumn();
     }
     
     public function __call($methode, $params) {
