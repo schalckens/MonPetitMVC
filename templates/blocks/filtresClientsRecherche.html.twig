@@ -1,6 +1,6 @@
 {% block recherche %}
-    <h2>Recherhce selon critères</h2>
-    <form action="index.php?c=GestionClient&a=rechercheClientsAjax" method="post">
+    <h2>Recherche selon critères</h2>
+    <form action="index.php?c=GestionClient&a=rechercheClients" method="post">
         <div class="form-group">
             {{ elements.list("titreCli", titres, "titre", "titres") }}
             {{ elements.list("villeCli", villes, "ville", "villes") }}
