@@ -61,13 +61,19 @@ class GestionCommandeController {
     public function commandesUnClient($idClient) {
         $idClient = filter_var(intval($idClient['id']), FILTER_VALIDATE_INT);
         //$modele = new GestionCommandeModel();
-        $repository = new CommandeRepository("APP\Entity\Commande");
+        //$repository = new CommandeRepository("APP\Entity\Commande");
+        $repository = Repository::getRepository("APP\Entity\Commande");
         //$modeleClient = new GestionClientModel();
         $repositoryClient = new ClientRepository("APP\Entity\Client");
         //$commandes = $modele->findAllByIdClient($idClient);
-        $commandes = $repository->findAllByIdClient($idClient);
+        //$commandes = $repository->findAllByIdClient($idClient);
         //$client = $modeleClient->find($idClient);
         $client = $repositoryClient->find($idClient);
+        $params = array (
+            'idClient' =>$idClient
+        );
+        $commandes = $repository->findBy($params);
+        
         $r = new ReflectionClass($this);
         $vue = str_replace('Controller', 'View', $r->getShortName()) . "/plusieursCommandeUnclient.html.twig";
         $params = array(
