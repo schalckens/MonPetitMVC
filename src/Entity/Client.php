@@ -61,6 +61,14 @@ class Client {
     public function getTelCli() {
         return $this->telCli;
     }
+    
+    public function setAdresseRue2Cli($param) {
+        $this->adresseRue2Cli = $param;
+    }
+    
+    public function setTelCli($param) {
+        $this->telCli = $param;
+    }
 
     public function __toString() {
         return "Le client dont le numéro est égal à " . $this->noCli . " s'appelle " . $this->titreCli . " " . $this->nomCli . " " . $this->prenomCli . "<br>";
