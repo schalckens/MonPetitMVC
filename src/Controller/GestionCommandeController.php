@@ -15,6 +15,7 @@ use APP\Repository\CommandeRepository;
 use ReflectionClass;
 use \Exception;
 use Tools\MyTwig;
+use APP\Repository\ClientRepository;
 
 class GestionCommandeController {
 
@@ -58,10 +59,21 @@ class GestionCommandeController {
     }
 
     public function commandesUnClient($idClient) {
-        $modele = new GestionCommandeModel();
-        $modeleClient = new GestionClientModel();
-        $commandes = $modele->findAllByIdClient($idClient['id']);
-        $client = $modeleClient->find($idClient['id']);
+        $idClient = filter_var(intval($idClient['id']), FILTER_VALIDATE_INT);
+        //$modele = new GestionCommandeModel();
+        //$repository = new CommandeRepository("APP\Entity\Commande");
+        $repository = Repository::getRepository("APP\Entity\Commande");
+        //$modeleClient = new GestionClientModel();
+        $repositoryClient = new ClientRepository("APP\Entity\Client");
+        //$commandes = $modele->findAllByIdClient($idClient);
+        //$commandes = $repository->findAllByIdClient($idClient);
+        //$client = $modeleClient->find($idClient);
+        $client = $repositoryClient->find($idClient);
+        $params = array (
+            'idClient' =>$idClient
+        );
+        $commandes = $repository->findBy($params);
+        
         $r = new ReflectionClass($this);
         $vue = str_replace('Controller', 'View', $r->getShortName()) . "/plusieursCommandeUnclient.html.twig";
         $params = array(

@@ -1,5 +1,6 @@
+{% import '/imports/elements.html' as elements %}
 {% block recherche %}
-    <h2>Recherhce selon critères</h2>
+    <h2>Recherche selon critères</h2>
     <form action="index.php?c=GestionClient&a=rechercheClientsAjax" method="post">
         <div class="form-group">
             {{ elements.list("titreCli", titres, "titre", "titres") }}
@@ -13,6 +14,5 @@
                 {% endfor %}
             </h4>
         {% endif %}
-        <button type="submit" class="btn btn-default">Voir</button>
     </form>
 {% endblock %}
