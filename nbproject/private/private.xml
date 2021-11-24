@@ -12,7 +12,6 @@
             <file>file:/C:/Users/valentine.schalckens/Documents/NetBeansProjects/MonPetitMVC/src/Entity/Commande.php</file>
             <file>file:/C:/Users/valentine.schalckens/Documents/NetBeansProjects/MonPetitMVC/src/Repository/CommandeRepository.php</file>
             <file>file:/C:/Users/valentine.schalckens/Documents/NetBeansProjects/MonPetitMVC/templates/layout.html.twig</file>
-            <file>file:/C:/Users/valentine.schalckens/Documents/NetBeansProjects/MonPetitMVC/src/Controller/GestionCommandeController.php</file>
             <file>file:/C:/Users/valentine.schalckens/Documents/NetBeansProjects/MonPetitMVC/includes/Repository.php</file>
             <file>file:/C:/Users/valentine.schalckens/Documents/NetBeansProjects/MonPetitMVC/includes/MyTwig.php</file>
             <file>file:/C:/Users/valentine.schalckens/Documents/NetBeansProjects/MonPetitMVC/templates/GestionCommandeView/plusieursCommandeUnClient.html.twig</file>
@@ -20,8 +19,9 @@
             <file>file:/C:/Users/valentine.schalckens/Documents/NetBeansProjects/MonPetitMVC/vendor/composer/ClassLoader.php</file>
             <file>file:/C:/Users/valentine.schalckens/Documents/NetBeansProjects/MonPetitMVC/src/Repository/ClientRepository.php</file>
             <file>file:/C:/Users/valentine.schalckens/Documents/NetBeansProjects/MonPetitMVC/includes/Connexion.php</file>
+            <file>file:/C:/Users/valentine.schalckens/Documents/NetBeansProjects/MonPetitMVC/templates/blocks/singleClient.html.twig</file>
             <file>file:/C:/Users/valentine.schalckens/Documents/NetBeansProjects/MonPetitMVC/src/Model/GestionCommandeModel.php</file>
-            <file>file:/C:/Users/valentine.schalckens/Documents/NetBeansProjects/MonPetitMVC/src/Controller/GestionClientController.php</file>
+            <file>file:/C:/Users/valentine.schalckens/Documents/NetBeansProjects/MonPetitMVC/templates/GestionClientView/unClient.html.twig</file>
         </group>
     </open-files>
 </project-private>
