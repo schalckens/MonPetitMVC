@@ -208,7 +208,7 @@ class GestionClientController {
         $rawData = $repository->statistiquesTousClients();
         $nomCol = array_column($rawData, 'nom');
         $nbComCol = array_column($rawData, 'nbcom');
-        $rawData = array_multisort($nomCol, SORT_ASC, SORT_STRING, $nbComCol,SORT_DESC, SORT_NUMERIC, $rawData);
+        array_multisort($nbComCol,SORT_DESC, $nomCol, SORT_ASC, $rawData);
         if($rawData) {
             $r = new ReflectionClass($this);
             $vue = str_replace('Controller', 'View', $r->getShortName())."/statsClients.html.twig";
