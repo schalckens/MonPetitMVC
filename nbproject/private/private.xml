@@ -16,6 +16,7 @@
             <file>file:/C:/Users/valentine.schalckens/Documents/NetBeansProjects/MonPetitMVC/templates/GestionClientView/statsClients.html.twig</file>
             <file>file:/C:/Users/valentine.schalckens/Documents/NetBeansProjects/MonPetitMVC/src/TwigExtension/SortByFieldExtension.php</file>
             <file>file:/C:/Users/valentine.schalckens/Documents/NetBeansProjects/MonPetitMVC/templates/blocks/singleClient.html.twig</file>
+            <file>file:/C:/Users/valentine.schalckens/Documents/NetBeansProjects/MonPetitMVC/src/Controller/GestionClientController.php</file>
             <file>file:/C:/Users/valentine.schalckens/Documents/NetBeansProjects/MonPetitMVC/templates/blocks/clientRecherche.html.twig</file>
             <file>file:/C:/Users/valentine.schalckens/Documents/NetBeansProjects/MonPetitMVC/templates/GestionClientView/unClient.html.twig</file>
         </group>
