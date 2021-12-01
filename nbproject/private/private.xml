@@ -2,23 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/Users/valentine.schalckens/Documents/NetBeansProjects/MonPetitMVC/templates/blocks/arrayClients.html.twig</file>
-            <file>file:/C:/Users/valentine.schalckens/Documents/NetBeansProjects/MonPetitMVC/templates/GestionClientView/tousClients.html.twig</file>
-            <file>file:/C:/Users/valentine.schalckens/Documents/NetBeansProjects/MonPetitMVC/templates/blocks/arrayStatsClients.html.twig</file>
-            <file>file:/C:/Users/valentine.schalckens/Documents/NetBeansProjects/MonPetitMVC/templates/GestionClientView/filtresClientsAjax.html.twig</file>
-            <file>file:/C:/Users/valentine.schalckens/Documents/NetBeansProjects/MonPetitMVC/src/Repository/CommandeRepository.php</file>
-            <file>file:/C:/Users/valentine.schalckens/Documents/NetBeansProjects/MonPetitMVC/templates/layout.html.twig</file>
-            <file>file:/C:/Users/valentine.schalckens/Documents/NetBeansProjects/MonPetitMVC/includes/Repository.php</file>
-            <file>file:/C:/Users/valentine.schalckens/Documents/NetBeansProjects/MonPetitMVC/includes/MyTwig.php</file>
-            <file>file:/C:/Users/valentine.schalckens/Documents/NetBeansProjects/MonPetitMVC/src/Repository/ClientRepository.php</file>
-            <file>file:/C:/Users/valentine.schalckens/Documents/NetBeansProjects/MonPetitMVC/templates/GestionClientView/unClientAjax.html.twig</file>
-            <file>file:/C:/Users/valentine.schalckens/Documents/NetBeansProjects/MonPetitMVC/templates/GestionClientView/statsClients.html.twig</file>
-            <file>file:/C:/Users/valentine.schalckens/Documents/NetBeansProjects/MonPetitMVC/src/TwigExtension/SortByFieldExtension.php</file>
-            <file>file:/C:/Users/valentine.schalckens/Documents/NetBeansProjects/MonPetitMVC/templates/blocks/singleClient.html.twig</file>
-            <file>file:/C:/Users/valentine.schalckens/Documents/NetBeansProjects/MonPetitMVC/src/Controller/GestionClientController.php</file>
-            <file>file:/C:/Users/valentine.schalckens/Documents/NetBeansProjects/MonPetitMVC/templates/blocks/clientRecherche.html.twig</file>
-            <file>file:/C:/Users/valentine.schalckens/Documents/NetBeansProjects/MonPetitMVC/templates/GestionClientView/unClient.html.twig</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
