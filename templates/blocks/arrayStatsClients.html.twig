@@ -1,0 +1,30 @@
+{% if stats %}
+    <table class="table table-responsive">
+        <thead>
+            <tr>
+                <th scope="col"> Num </th>
+                <th scope="col"> Nom </th>
+                <th scope="col"> Prénom </th>
+                <th scope="col"> Ville </th>
+                <th scope="col"> Nombre de Commandes </th>
+            </tr>
+        </thead>
+        {% for stat in stats %}
+            <tbody>
+                <th scope="row">{{ stat['id'] }}</th>
+                <td>{{ stat['nom'] }}</td>
+                <td>{{ stat['prenom'] }} </td>
+                <td>{{ stat['ville'] }} </td>
+                {% if stat['nbcom'] %}
+                    <td> {{ stat['nbcom'] }} </td>
+                {% else %}
+                    <td>0</td>
+                {% endif %}
+            </tbody>
+        {% endfor %}
+    </table>
+{% else %}
+    <div class="alert alert-danger">
+        <center>Aucun client trouvé</center>
+    </div>
+{% endif %}

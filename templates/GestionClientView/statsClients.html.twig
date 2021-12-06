@@ -1,0 +1,10 @@
+{% extends "layout.html.twig" %}
+{% block contenu %}
+    <p><h2> Liste des clients </h2></p>
+    {{ include('/blocks/arrayStatsClients.html.twig') }}
+{% endblock %}
+{% block footer %}
+    {{ parent() }}
+    Nombre de clients : {{ stats|length }}
+    Fin de l'affichage
+{% endblock %}

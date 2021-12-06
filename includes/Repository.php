@@ -174,4 +174,9 @@ class Repository {
         }
         return $retour;
     }
+    
+    public function executeSQL($sql):array {
+        $resultat=$this->connexion->query($sql);
+        return $resultat->fetchAll(PDO::FETCH_ASSOC);
+    }
 }
