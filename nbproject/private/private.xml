@@ -2,24 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/D:/Projet_2021_2022/MonPetitMVC/templates/GestionClientView/unClientAjax.html.twig</file>
-            <file>file:/D:/Projet_2021_2022/MonPetitMVC/templates/imports/elements.html</file>
-            <file>file:/D:/Projet_2021_2022/MonPetitMVC/templates/blocks/filtresClientsRecherche.html.twig</file>
-            <file>file:/D:/Projet_2021_2022/MonPetitMVC/templates/blocks/clientRecherche.html.twig</file>
-            <file>file:/D:/Projet_2021_2022/MonPetitMVC/public/assets/js/GestionClient/clientsFunctions.js</file>
-            <file>file:/D:/Projet_2021_2022/MonPetitMVC/public/assets/js/GestionClient/clientsFunctionsFiltres.js</file>
-            <file>file:/D:/Projet_2021_2022/MonPetitMVC/templates/GestionClientView/unClient.html.twig</file>
-            <file>file:/D:/Projet_2021_2022/MonPetitMVC/includes/Repository.php</file>
-            <file>file:/D:/Projet_2021_2022/MonPetitMVC/templates/blocks/singleClient.html.twig</file>
-            <file>file:/D:/Projet_2021_2022/MonPetitMVC/src/Controller/GestionCommandeController.php</file>
-            <file>file:/D:/Projet_2021_2022/MonPetitMVC/templates/GestionClientView/filtresClientsAjax.html.twig</file>
-            <file>file:/D:/Projet_2021_2022/MonPetitMVC/templates/blocks/singleClientModif.html.twig</file>
-            <file>file:/D:/Projet_2021_2022/MonPetitMVC/templates/GestionClientView/filtreClients.html.twig</file>
-            <file>file:/D:/Projet_2021_2022/MonPetitMVC/public/assets/js/creationXHR.js</file>
-            <file>file:/D:/Projet_2021_2022/MonPetitMVC/src/Controller/GestionClientController.php</file>
-            <file>file:/D:/Projet_2021_2022/MonPetitMVC/templates/blocks/arrayClients.html.twig</file>
-
-        </group>
+        <group/>
     </open-files>
 </project-private>
